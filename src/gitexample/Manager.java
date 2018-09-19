@@ -19,7 +19,7 @@ public class Manager extends Employee{
         super(name, employeeNum);
     }
     
-    public void addRmployee( Employee empNew)
+    public void addEmployee( Employee empNew)
     {
         employees.add(empNew);
     }
@@ -33,13 +33,10 @@ public class Manager extends Employee{
     public String PrintDetails()
     {
         StringBuilder sb = new StringBuilder();
-        sb.append(employeeNum + " ");
-        sb.append(name + " ");
-        sb.append("\n");
+        sb.append(employeeNum + " " + name + "\n");
         for (Employee e : employees)
         {
-            sb.append("Employee: " + e.name);
-            sb.append("\n");
+            sb.append("Employee: " + e.name + "\n");
         }
         return sb.toString();
     }
